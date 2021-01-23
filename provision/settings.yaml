@@ -1,0 +1,15 @@
+# configuration used by Vagrantfile
+box: centos/7
+hostname: vagrant.dev.local
+name: vagrantbox
+memory: 4096
+cpus: 2
+plugins:
+  - vagrant-vbguest
+  - vagrant-proxyconf
+ports:
+  - 8090:8080
+  - 3000:3000
+  - 1234:1234
+packages:
+  - epel-release
